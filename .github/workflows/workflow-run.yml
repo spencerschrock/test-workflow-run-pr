@@ -1,0 +1,11 @@
+name: workflow-run
+on:
+  workflow_run:
+    workflows: [other]
+    types: [completed]
+    branches: [main]
+jobs:
+  foo:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo 123
